@@ -1,0 +1,28 @@
+<div class="modal fade" id="addCityymodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add City</h5>
+        <button type="button" class="btn-close" #closeModal data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="AddCity" class="visually-hidden">City</label>
+          <input type="text" autocomplete="off" class="form-control" name="AddCity" id="AddCity" [(ngModel)]="City"
+            placeholder="City">
+        </div>
+        <div class="mb-3">
+          <label for="AddCity" class="visually-hidden">country</label>
+          <select class="form-select" id="cars" [(ngModel)]="selectedCountryId">
+            <option selected>Select Country</option>
+            <option *ngFor="let country of countries" [value]=country.id>{{country.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="AddCity()">Save</button>
+
+      </div>
+    </div>
+  </div>
+</div>

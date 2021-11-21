@@ -1,0 +1,20 @@
+<div class="modal fade" id="addCountrymodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Country <span class="text-danger">{{Country}}</span></h5>
+        <button type="button" #closeModal class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="AddCountry" class="visually-hidden">Country</label>
+          <input type="text" autocomplete="off" class="form-control" name="AddCountry" id="AddCountry"
+            placeholder="Country" [(ngModel)]="Country">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="AddCountry()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
